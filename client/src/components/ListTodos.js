@@ -6,7 +6,6 @@ const ListTodos = () => {
   const [todos, setTodos] = useState([]);
 
   //delete todo function
-
   const deleteTodo = async id => {
     try {
       const deleteTodo = await fetch(`http://localhost:5000/todos/${id}`, {
@@ -48,11 +47,7 @@ const ListTodos = () => {
           </tr>
         </thead>
         <tbody>
-          {/*<tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr> */}
+          {}
           {todos.map(todo => (
             <tr key={todo.todo_id}>
               <td>{todo.description}</td>

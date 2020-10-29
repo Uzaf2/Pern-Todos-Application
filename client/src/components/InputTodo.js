@@ -1,8 +1,14 @@
 import React, { Fragment, useState } from "react";
+import Navbar from 'react-bootstrap/Navbar';
 
 const InputTodo = () => {
   const [description, setDescription] = useState("");
 
+  var style = {
+    color: "#FFFFFF",
+    height: "70px",
+    width: "100%"
+  };
   const onSubmitForm = async e => {
     e.preventDefault();
     try {
@@ -21,7 +27,8 @@ const InputTodo = () => {
 
   return (
     <Fragment>
-      <h1 className="text-center mt-5">Pern Todo List</h1>
+      <nav class="navbar navbar-dark bg-dark" style={style}> Pern Todo List Application </nav>
+      <h1 className="text-center mt-5"></h1>
       <form className="d-flex mt-5" onSubmit={onSubmitForm}>
         <input
           type="text"
